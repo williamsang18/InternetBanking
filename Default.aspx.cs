@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,23 +16,33 @@ namespace InternetBanking
         Cuenta c3 = new Cuenta();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Prueba de cuentas
-            c1.Numero = "123456";
-            c1.Balance = 60000;
+            lblId.Text = Convert.ToString((int)Session["UserId"]);
 
-            c2.Numero = "159753";
-            c2.Balance = 805000;
+            ClientInfoRequest cliente = new ClientInfoRequest(Convert.ToString(Session["SessionToken"]), int.Parse(Convert.ToString(Session["ClientId"])));
+            string resultado = Utils.makeRequest("/v1/getclient", JsonSerializer.Serialize(cliente));
+            BankClient data = JsonSerializer.Deserialize<BankClient>(resultado);
 
-            c3.Numero = "754158";
-            c3.Balance = 704000;
+            lblNombre.Text = data.Name;
+            lblCedula.Text = data.Cedula;
+            lblSexo.Text = Convert.ToString(data.Sex);
+            lblFechaRegistro.Text = Convert.ToString(data.RegisterDate);
 
-            List<Cuenta> cuentas = new List<Cuenta>() {c1, c2, c3};
-            //
 
-            gvCuentas.DataSource = cuentas;
-            gvCuentas.DataBind();
+            ////Prueba de cuentas
+            //c1.Numero = "123456";
+            //c1.Balance = 60000;
 
-            Usuario user1 = (Usuario)Session["user"];
+            //c2.Numero = "159753";
+            //c2.Balance = 805000;
+
+            //c3.Numero = "754158";
+            //c3.Balance = 704000;
+
+            //List<Cuenta> cuentas = new List<Cuenta>() {c1, c2, c3};
+            ////
+
+            //gvCuentas.DataSource = cuentas;
+            //gvCuentas.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)

@@ -28,15 +28,16 @@ namespace InternetBanking
                 FormsAuthentication.RedirectFromLoginPage(Login1.UserName, true);
             }
             */
-            Usuario user = new Usuario(Login1.UserName, Login1.Password);
+            LoginRequest user = new LoginRequest(Login1.UserName, Login1.Password);
 
             //UserId, SessionToken
             string resultado = Utils.makeRequest("/v1/login", JsonSerializer.Serialize(user));
-            dynamic data = JsonSerializer.Deserialize<dynamic>(resultado);
-            if (data.StatusCode = 200) 
+            ClientSession data = JsonSerializer.Deserialize<ClientSession>(resultado);
+            if(data.UserId != 0) 
             {
-                Session["UserId"] = data.UserId;
+                Session["UserID"] = data.UserId;
                 Session["SessionToken"] = data.SessionToken;
+                Session["ClientID"] = data.ClientId;
                 FormsAuthentication.RedirectFromLoginPage(Login1.UserName, true);
             }
         }

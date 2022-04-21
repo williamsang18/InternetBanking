@@ -29,7 +29,24 @@
             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
             <StaticSelectedStyle BackColor="#5D7B9D" />
         </asp:Menu>
+        <asp:Label ID="lblId" runat="server" Text="Label"></asp:Label>
         </h3>
+        <p>
+            Nombre:
+            <asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label>
+        </p>
+        <p>
+            Cédula:
+            <asp:Label ID="lblCedula" runat="server" Text="Label"></asp:Label>
+        </p>
+        <p>
+            Sexo:
+            <asp:Label ID="lblSexo" runat="server" Text="Label"></asp:Label>
+        </p>
+        <p>
+            Fecha de Registro:
+            <asp:Label ID="lblFechaRegistro" runat="server" Text="Label"></asp:Label>
+        </p>
         <h3>
             <asp:Label ID="LabelDefault0" runat="server" Text="Cuentas"></asp:Label>
         </h3>
