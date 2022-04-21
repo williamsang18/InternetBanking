@@ -30,7 +30,6 @@
             <StaticSelectedStyle BackColor="#5D7B9D" />
         </asp:Menu>
         <asp:Label ID="lblId" runat="server" Text="Label"></asp:Label>
-        </h3>
         <p>
             Nombre:
             <asp:Label ID="lblNombre" runat="server" Text="Label"></asp:Label>

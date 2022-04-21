@@ -10,10 +10,6 @@ namespace InternetBanking
 {
     public partial class Home : System.Web.UI.Page
     {
-        //Cuentas
-        Cuenta c1 = new Cuenta();
-        Cuenta c2 = new Cuenta();
-        Cuenta c3 = new Cuenta();
         protected void Page_Load(object sender, EventArgs e)
         {
             lblId.Text = Convert.ToString((int)Session["UserId"]);
@@ -27,19 +23,7 @@ namespace InternetBanking
             lblSexo.Text = Convert.ToString(data.Sex);
             lblFechaRegistro.Text = Convert.ToString(data.RegisterDate);
 
-
-            ////Prueba de cuentas
-            //c1.Numero = "123456";
-            //c1.Balance = 60000;
-
-            //c2.Numero = "159753";
-            //c2.Balance = 805000;
-
-            //c3.Numero = "754158";
-            //c3.Balance = 704000;
-
             //List<Cuenta> cuentas = new List<Cuenta>() {c1, c2, c3};
-            ////
 
             //gvCuentas.DataSource = cuentas;
             //gvCuentas.DataBind();

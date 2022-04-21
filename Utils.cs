@@ -34,6 +34,7 @@ namespace InternetBanking
             return TResultString.Result;
         }
 
+        //Encriptar contraseña
         public static string sha256_hash(string value)
         {
             StringBuilder Sb = new StringBuilder();
