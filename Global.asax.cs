@@ -16,6 +16,7 @@ namespace InternetBanking
             // Code that runs on application startup
            AreaRegistration.RegisterAllAreas();
            RouteConfig.RegisterRoutes(RouteTable.Routes);
+           log4net.Config.XmlConfigurator.Configure();
         }
     }
 }

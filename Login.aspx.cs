@@ -11,10 +11,11 @@ namespace InternetBanking
 {
     public partial class Login : System.Web.UI.Page
     {
-
+        //Log4Net
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            log.Info("Pagina cargada...");
         }
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
