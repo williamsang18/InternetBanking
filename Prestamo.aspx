@@ -10,9 +10,9 @@
     <form id="form1" runat="server">
         <h1>
             <asp:Label ID="Label1" runat="server" Text="Internet Banking"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Log Out" />
         </h1>
-        <div>
-        </div>
         <asp:Menu ID="Menu1" runat="server" Orientaion="Horizontal" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" StaticSubMenuIndent="10px" style="text-align: justify">
             <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
@@ -30,6 +30,23 @@
             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
             <StaticSelectedStyle BackColor="#5D7B9D" />
         </asp:Menu>
+        Préstamo:
+        <asp:DropDownList ID="ddlPrestamo" runat="server" OnSelectedIndexChanged="ddlPrestamo_SelectedIndexChanged">
+        </asp:DropDownList>
+        <br />
+        <br />
+        Cuenta Origen:
+        <asp:DropDownList ID="ddlCuentaOrigen" runat="server" OnSelectedIndexChanged="ddlCuentaOrigen_SelectedIndexChanged">
+        </asp:DropDownList>
+        <br />
+        <br />
+        Monto:
+        <asp:TextBox ID="tBoxMonto" runat="server" OnTextChanged="tBoxMonto_TextChanged"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="btnProcesar" runat="server" Text="Procesar" Width="68px" OnClick="btnProcesar_Click" />
+&nbsp;
+        <asp:Button ID="btnConfirmar" runat="server" Enabled="False" Text="Confirmar" Width="68px" OnClick="btnConfirmar_Click" Visible="False" />
     </form>
 </body>
 </html>

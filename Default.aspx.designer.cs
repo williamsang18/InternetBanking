@@ -33,6 +33,15 @@ namespace InternetBanking
         protected global::System.Web.UI.WebControls.Label lblDefault;
 
         /// <summary>
+        /// btnLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogout;
+
+        /// <summary>
         /// Menu1 control.
         /// </summary>
         /// <remarks>
@@ -40,15 +49,6 @@ namespace InternetBanking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Menu Menu1;
-
-        /// <summary>
-        /// lblId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblId;
 
         /// <summary>
         /// lblNombre control.
@@ -105,12 +105,21 @@ namespace InternetBanking
         protected global::System.Web.UI.WebControls.GridView gvCuentas;
 
         /// <summary>
-        /// btnCuenta control.
+        /// btnMovimientos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCuenta;
+        protected global::System.Web.UI.WebControls.Button btnMovimientos;
+
+        /// <summary>
+        /// gvMovimientos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvMovimientos;
     }
 }

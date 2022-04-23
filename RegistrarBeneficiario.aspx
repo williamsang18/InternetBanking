@@ -10,6 +10,8 @@
     <form id="form1" runat="server">
         <h1>
             <asp:Label ID="Label1" runat="server" Text="Internet Banking"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Log Out" />
         </h1>
         <asp:Menu ID="Menu1" runat="server" Orientaion="Horizontal" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" StaticSubMenuIndent="10px" style="text-align: justify">
             <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
@@ -28,6 +30,19 @@
             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
             <StaticSelectedStyle BackColor="#5D7B9D" />
         </asp:Menu>
+        <p>
+            Número de Cuenta:&nbsp;
+            <asp:TextBox ID="tBoxNumeroCuenta" runat="server" OnTextChanged="tBoxNumeroCuenta_TextChanged"></asp:TextBox>
+        </p>
+        <p>
+            Alias:
+            <asp:TextBox ID="tBoxAlias" runat="server" OnTextChanged="tBoxAlias_TextChanged"></asp:TextBox>
+        </p>
+        <p>
+            <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" Width="68px" OnClick="btnRegistrar_Click" />
+&nbsp;
+            <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" Width="68px" OnClick="btnConfirmar_Click" Visible="False" />
+        </p>
         </form>
 </body>
 </html>

@@ -121,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CuentaPropia.aspx" />
-    <Content Include="DetalleCuenta.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
@@ -139,13 +138,6 @@
     </Compile>
     <Compile Include="CuentaPropia.aspx.designer.cs">
       <DependentUpon>CuentaPropia.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DetalleCuenta.aspx.cs">
-      <DependentUpon>DetalleCuenta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DetalleCuenta.aspx.designer.cs">
-      <DependentUpon>DetalleCuenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
